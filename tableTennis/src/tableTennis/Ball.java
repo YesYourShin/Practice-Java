@@ -23,11 +23,8 @@ public class Ball {
 		}
 		while(ySpeed == 0) {
 			ySpeed = random.nextInt(3)-1;
-
 		}
 
-		
-		
 		if (x + xSpeed < 0)
 			xSpeed *= -1;
 		if (x + xSpeed > game.getWidth() - 2 * RADIUS)
@@ -40,25 +37,16 @@ public class Ball {
 			xSpeed = -xSpeed;
 		x += xSpeed;
 		y += ySpeed;
-
-		
 	}
-	
 	
 	private boolean collision() {
 		return game.racket1.getBounds().intersects(getBounds())
 				|| game.racket2.getBounds().intersects(getBounds());
-		
-		
 	}
-
-	
-	
 	
 	public void draw(Graphics2D g) {
 		g.setColor(color);
 		g.fillOval(x, y, 2 * RADIUS, 2 * RADIUS);
-		
 	}
 	
 	public Rectangle getBounds() {
