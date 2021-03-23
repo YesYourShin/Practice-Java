@@ -7,9 +7,7 @@ import java.awt.event.KeyEvent;
 
 public class Racket {
 	protected static final int WIDTH = 10;
-
 	protected static final int HEIGHT = 80;
-	
 	protected int x = 0, y = 0;
 	protected int xSpeed = 0;
 	protected int ySpeed = 0;
@@ -46,12 +44,9 @@ public class Racket {
 			game.racket2.ySpeed = -3;
 		else if (e.getKeyCode() == KeyEvent.VK_DOWN)
 			game.racket2.ySpeed = 3;
-		
 	}
 	
 	public Rectangle getBounds() {
 		return new Rectangle(x, y, WIDTH, HEIGHT);
 	}
-
-	
 }
