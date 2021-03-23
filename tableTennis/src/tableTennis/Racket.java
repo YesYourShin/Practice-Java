@@ -11,7 +11,7 @@ public class Racket {
 	protected static final int HEIGHT = 80;
 	
 	protected int x = 0, y = 0;
-	private int xSpeed = 0;
+	protected int xSpeed = 0;
 	protected int ySpeed = 0;
 	private GameBoard game;
 	private Color color;
@@ -38,10 +38,9 @@ public class Racket {
 	}
 	
 	public void keyPressed(KeyEvent e) {
-		System.out.println(e.getKeyCode());
-		if (e.getKeyCode() == KeyEvent.VK_UP)
+		if (e.getKeyCode() == KeyEvent.VK_W)
 			game.racket1.ySpeed = -3;
-		else if (e.getKeyCode() == KeyEvent.VK_DOWN)
+		else if (e.getKeyCode() == KeyEvent.VK_S)
 			game.racket1.ySpeed = 3;
 		if (e.getKeyCode() == KeyEvent.VK_UP)
 			game.racket2.ySpeed = -3;
