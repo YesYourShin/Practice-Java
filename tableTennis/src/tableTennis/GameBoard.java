@@ -21,28 +21,18 @@ public class GameBoard extends JPanel implements KeyListener{
 	JLabel label3 = new JLabel();
 	int situation = 0;
 	
-	
 	public GameBoard() {
 		ball = new Ball(this, Color.red);
 		this.setBackground(Color.green);
 		racket1 = new Racket(this, 10, 150, Color.blue);
 		racket2 = new Racket(this, 565, 150, Color.yellow);
-
-		 
-
-
-		
 	}
 			
 	
 	void startGame() {
-		
 		ball.move();
-		
 		racket1.move();
 		racket2.move();
-		
-		
 	}
 	
 	public void score() {
@@ -55,14 +45,12 @@ public class GameBoard extends JPanel implements KeyListener{
 		if (situation == 1) {
 			if (ball.x <= 0) {
 				scoreA += 1;
-				
 			} else if (ball.x >= 544) {
 				scoreB += 1;
 				System.out.println(scoreB);
 			}
 		}
 		ballCollision();
-		
 	}
 	
 	@Override
@@ -83,7 +71,6 @@ public class GameBoard extends JPanel implements KeyListener{
 		case 1:
 			racket1.keyPressed(e);
 			racket2.keyPressed(e);
-		
 			break;
 		case 2:
 			if (e.getKeyCode() == KeyEvent.VK_SPACE) {
@@ -91,12 +78,8 @@ public class GameBoard extends JPanel implements KeyListener{
 			}
 			break;
 		}
-		
 		if (situation == 1) {
 			}
-		
-
-		
 	}
 
 	@Override
@@ -117,8 +100,6 @@ public class GameBoard extends JPanel implements KeyListener{
 			startGame();
 			break;
 		}
-		
-		
 	}
 	
 	void ballCollision() {
@@ -135,7 +116,6 @@ public class GameBoard extends JPanel implements KeyListener{
 		racket1.draw(g2d);
 		racket2.draw(g2d);
 	}
-	
 	
 	public static void main(String[] args) {
 	JFrame frame = new JFrame("TableTennis Game");
@@ -155,14 +135,6 @@ public class GameBoard extends JPanel implements KeyListener{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-
 	}
-	
-	
-	
 		}
-	
-	
-	
-	
 }
