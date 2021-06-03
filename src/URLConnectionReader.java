@@ -1,9 +1,9 @@
-import java.net.*;
 import java.io.*;
+import java.net.*;
 
 public class URLConnectionReader {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 			// 1. URL °´Ã¼
 			URL site = new URL("https://www.naver.com");
 			
