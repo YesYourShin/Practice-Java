@@ -1,0 +1,4 @@
+driverClassName=org.mariadb.jdbc.Driver
+Url=jdbc:mariadb://localhost:3306/oop
+userName=root
+userPassword=root
